@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from api.resources import PatiensResource
+from api.views import index
 
 patient_resource = PatiensResource()
 
 urlpatterns = [
+    url('', index , name="index"),
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include(patient_resource.urls)),
 ]
