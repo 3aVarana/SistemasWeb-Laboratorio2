@@ -21,7 +21,7 @@ from api.views import index
 patient_resource = PatiensResource()
 
 urlpatterns = [
-    url('', index , name="index"),
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include(patient_resource.urls)),
+    url(r'home/', index , name="index"),
 ]

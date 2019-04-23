@@ -7,4 +7,4 @@ class Patient(models.Model):
     cellphone = models.IntegerField()
 
 def __str__(self):
-        return self.name
+        return self.name2
